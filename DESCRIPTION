@@ -1,6 +1,6 @@
 Package: alm
-Version: 0.1
-Date: 2013-10-05
+Version: 0.1.1
+Date: 2013-11-01
 Description: R wrapper to the almetrics API platform developed by PLoS
 Title: R wrapper to the almetrics API platform developed by PLoS
 License: CC0
@@ -25,7 +25,7 @@ Collate: 'almdatepub.R' 'almdateupdated.R' 'almpubmedcentid.R'
         'almpubmedid.R' 'almtitle.R' 'almupdated.R' 'zzz.R' 'alm.R'
         'almplot.R' 'almevents.R' 'startup.R' 'almtotals.R'
         'signposts.R' 'plot_signposts.R' 'plot_density.R' 'globals.R'
-Packaged: 2013-10-05 16:32:49 UTC; scottmac2
+Packaged: 2013-11-01 22:44:04 UTC; scottmac2
 Author: Scott Chamberlain [aut, cre],
   Carl Boettiger [aut],
   Karthik Ram [aut],
@@ -33,4 +33,4 @@ Author: Scott Chamberlain [aut, cre],
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-10-05 20:05:02
+Date/Publication: 2013-11-02 01:23:58

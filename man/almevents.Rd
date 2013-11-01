@@ -84,6 +84,10 @@ out[["pmc"]] # get the results for PubMed Central
 out[["twitter"]] # get the results for twitter (boo, there aren't any)
 out[c("twitter","crossref")] # get the results for two sources
 
+#
+out <- alm(doi="10.1371/journal.pgen.1003471")
+out[["wordpress"]]
+
 # Another example
 out <- almevents(doi="10.1371/journal.pone.0001543")
 # remove those with no data
@@ -108,6 +112,13 @@ almevents(doi="10.1371/journal.pone.0035869", source="crossref")
 
 # Specify two specific sources
 almevents(doi="10.1371/journal.pone.0035869", source=c("crossref","twitter"))
+
+# Figshare data
+almevents(doi="10.1371/journal.pone.0069841")
 }
+}
+\references{
+  See a tutorial/vignette for alm at
+  \url{http://ropensci.org/tutorials/alm_tutorial.html}
 }
 

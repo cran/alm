@@ -5,7 +5,7 @@
 #' @importFrom RCurl getCurlHandle getForm
 #' @importFrom RJSONIO fromJSON
 #' @importFrom reshape sort_df
-#' @importFrom plyr compact
+#' @importFrom plyr compact rbind.fill
 #' @param doi Digital object identifier for an article in PLoS Journals (character)
 #' @param pmid PubMed object identifier (numeric)
 #' @param pmcid PubMed Central object identifier (numeric)
@@ -40,6 +40,8 @@
 #'    See more info on PLOS's relative metrics event source here 
 #'    \url{http://www.plosone.org/static/almInfo#relativeMetrics}
 #' @return PLoS altmetrics as data.frame's.
+#' @references See a tutorial/vignette for alm at 
+#' \url{http://ropensci.org/tutorials/alm_tutorial.html}
 #' @examples \dontrun{
 #' # For one article
 #' out <- almevents(doi="10.1371/journal.pone.0029797")
@@ -49,6 +51,10 @@
 #' out[["pmc"]] # get the results for PubMed Central
 #' out[["twitter"]] # get the results for twitter (boo, there aren't any)
 #' out[c("twitter","crossref")] # get the results for two sources
+#' 
+#' # 
+#' out <- alm(doi="10.1371/journal.pgen.1003471")
+#' out[["wordpress"]]
 #' 
 #' # Another example
 #' out <- almevents(doi="10.1371/journal.pone.0001543")
@@ -74,6 +80,9 @@
 #' 
 #' # Specify two specific sources
 #' almevents(doi="10.1371/journal.pone.0035869", source=c("crossref","twitter"))
+#' 
+#' # Figshare data 
+#' almevents(doi="10.1371/journal.pone.0069841")
 #' }
 #' @export
 almevents <- function(doi = NULL, pmid = NULL, pmcid = NULL, mdid = NULL, 
@@ -86,12 +95,12 @@ almevents <- function(doi = NULL, pmid = NULL, pmcid = NULL, mdid = NULL,
 	if(is.null(source)){source2 <- NULL} else{ source2 <- paste(source,collapse=",") }
 	
 	parse_events <- function() {	
-		args <- compact(
-			list(
-				api_key = key, info = 'event', months = months, 
-				days = days, source = source2, type = names(id)
-				)
-			)
+	  args <- compact(
+	    list(
+	      api_key = key, info = 'event', months = months, 
+	      days = days, source = source2, type = names(id)
+	    )
+	  )
 		if(length(id[[1]])==0){stop("Please provide a DOI")} else
 			if(length(id[[1]])==1){
 				if(names(id) == "doi") id <- gsub("/", "%2F", id)
@@ -341,26 +350,53 @@ almevents <- function(doi = NULL, pmid = NULL, pmcid = NULL, mdid = NULL,
 				  if(length(y$events)==0){paste("sorry, no events content yet")} else
 				  {
 				    meta <- y$events[names(y$events) %in% c("start_date","end_date")]
-				    data <- do.call(rbind,
+				    data <- do.call(rbind.fill,
 				                    lapply(y$events$subject_areas, function(x) 
 				                      data.frame(x[[1]], t(data.frame(x[[2]])))
 				                    )
 				    )
             row.names(data) <- NULL
-            names(data) <- c('reference_set','one','two','three','four','five','six','seven')
+#             names(data) <- c('reference_set','one','two','three','four','five','six','seven')
 				    list(meta=meta, data=data)
 				  }
 				} else if(y$name == "f1000"){
 				  if(length(y$events)==0){paste("sorry, no events content yet")} else
 				  {
-				    y$events
-# 				    paste("parser not written yet")
+				    data.frame(rbind(y$events), stringsAsFactors=FALSE)
 				  }
 				} else if(y$name == "figshare"){
 				  if(length(y$events)==0){paste("sorry, no events content yet")} else
 				  {
+				    y$events$items
+				  }
+				} else if(y$name == "wordpress"){
+				  if(length(y$events)==0){paste("sorry, no events content yet")} else
+				  {
+				    lapply(y$events, function(x) do.call(c, x))
+				  }
+				} else if(y$name == "pmceurope"){
+				  if(length(y$events)==0){paste("sorry, no events content yet")} else
+				  {
 				    y$events
-# 				    paste("parser not written yet")
+				    # 				    paste("parser not written yet")
+				  }
+				} else if(y$name == "pmceuropedata"){
+				  if(length(y$events)==0){paste("sorry, no events content yet")} else
+				  {
+				    y$events
+				    # 				    paste("parser not written yet")
+				  }
+				} else if(y$name == "openedition"){
+				  if(length(y$events)==0){paste("sorry, no events content yet")} else
+				  {
+				    y$events
+				    # 				    paste("parser not written yet")
+				  }
+				} else if(y$name == "reddit"){
+				  if(length(y$events)==0){paste("sorry, no events content yet")} else
+				  {
+				    y$events
+				    # 				    paste("parser not written yet")
 				  }
 				}
 			}
