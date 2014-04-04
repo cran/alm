@@ -1,7 +1,12 @@
 Package: alm
-Version: 0.1.1
-Date: 2013-11-01
-Description: R wrapper to the almetrics API platform developed by PLoS
+Version: 0.1.4
+Date: 2014-04-04
+Description: An R interface to the open source article level metrics API
+    created by the Public Library of Science (PLOS). A number of publishers are
+    using the open source app created by PLOS, so you can drop in a different
+    base URL to the functions in this package to get to not only PLOS data, but
+    data for Crossref, and more as the open source PLOS software is used.
+    Obtain rCharts at https://github.com/ramnathv/rCharts.
 Title: R wrapper to the almetrics API platform developed by PLoS
 License: CC0
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
@@ -17,15 +22,11 @@ BugReports: http://www.github.com/ropensci/alm/issues
 LazyLoad: yes
 LazyData: yes
 VignetteBuilder: knitr
-Imports: ggplot2, RCurl, RJSONIO, plyr, stringr, reshape, reshape2,
-        httr, grid, lubridate
-Suggests: testthat, roxygen2, rplos, knitr, rjson
+Imports: ggplot2, RCurl, plyr, stringr, reshape, reshape2, httr, grid,
+        RJSONIO, lubridate
+Suggests: testthat, roxygen2, rplos, knitr, jsonlite
 Enhances: rCharts
-Collate: 'almdatepub.R' 'almdateupdated.R' 'almpubmedcentid.R'
-        'almpubmedid.R' 'almtitle.R' 'almupdated.R' 'zzz.R' 'alm.R'
-        'almplot.R' 'almevents.R' 'startup.R' 'almtotals.R'
-        'signposts.R' 'plot_signposts.R' 'plot_density.R' 'globals.R'
-Packaged: 2013-11-01 22:44:04 UTC; scottmac2
+Packaged: 2014-04-04 22:24:32 UTC; sacmac
 Author: Scott Chamberlain [aut, cre],
   Carl Boettiger [aut],
   Karthik Ram [aut],
@@ -33,4 +34,4 @@ Author: Scott Chamberlain [aut, cre],
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2013-11-02 01:23:58
+Date/Publication: 2014-04-05 00:59:08
