@@ -1,6 +1,6 @@
-8bca92cc7f02d4e1a3611cc47fae2828 *DESCRIPTION
+86bbd4d84a0408c42855027afb76d389 *DESCRIPTION
 75f6ec0fb628676ac23255e4aee52ae2 *NAMESPACE
-12e5c84a3062ec767f272bedbba2bade *NEWS
+d2328c0ec96d024a91dcef88da7c72e8 *NEWS
 9b0068dd6dd7f51579fbb8aa4c51fa30 *R/alm.R
 e23c19d7a781406f593488fd00cda2af *R/almdatepub.R
 7b5e0db56e68d0028a98a4b5b4662aab *R/almdateupdated.R
@@ -18,7 +18,7 @@ c7c9aacdd63abee124197b45910eeff8 *R/plot_signposts.R
 5e822e10e02341f7fb0f9659517569f5 *R/startup.R
 a56974ff407202c63d753dd0934a7b50 *R/zzz.R
 cd0848006c9dc6441c919baeaf2658d2 *README.md
-a86d3dd81d2dea2276906461045dc253 *build/vignette.rds
+4903912ec71f463c8cfbed5f0e265df6 *build/vignette.rds
 6590ebe505543149b405776d2871a8cc *inst/doc/alm_vignette.Rmd
 bda5ad4dc4d9c7bdb2096850a907188e *inst/doc/alm_vignette.pdf
 5ddec6efe061c57025b1ffe76f0e557f *inst/vign/alm_vignette.Rmd
@@ -110,17 +110,16 @@ be62661bc413e55d3e1feefe64a1973d *man/signposts.Rd
 681b497c328f79c786605e452d58e5c0 *tests/test-all.R
 ef3cdf9dc130e01b9d4d4e166ac33d89 *tests/testthat/test-alm.R
 49efa2f23ff88f9ac216e3c33a7a5645 *tests/testthat/test-almdatepub.R
-01bb8ff65c0ee9ca8a5be63298fe6846 *tests/testthat/test-almevents.R
+f499ab18035b8accf10378526aa16378 *tests/testthat/test-almevents.R
 2a1610ce6358e72eab96719eaa8c2ab1 *tests/testthat/test-almplot.R
 7cd3928a9b843f893d4f0ae55a58d791 *tests/testthat/test-almpubmedcentid.R
 b83587720b5cdd1e785accf27ab1e0c4 *tests/testthat/test-almpubmedid.R
 8fcd88b71e2e411afad59e2d17c80829 *tests/testthat/test-almtitle.R
 65e16be11d213a81f21b8198fdf5f26f *tests/testthat/test-almtotals.R
-66ed857589df712510210c8d09942843 *tests/testthat/test-plot_signposts.R
+228ace6c3129ea0d69edeb8b5a5e72b9 *tests/testthat/test-plot_signposts.R
 fb689b6afb69a7b7f85fc14f0698a4f6 *tests/testthat/test-signposts.R
 6590ebe505543149b405776d2871a8cc *vignettes/alm_vignette.Rmd
 c30c98b2bd313cb3645d4bb712e1da27 *vignettes/alm_vignette.html
-6590ebe505543149b405776d2871a8cc *vignettes/alm_vignette.md
 fe236a271d013b82d4001d868f9908a7 *vignettes/figure/plot_densityplot1.png
 02cbebb83a7768a54f90a84cf1ab620f *vignettes/figure/plot_densityplot2.png
 1eede44732394955ae549a2cb98b9837 *vignettes/figure/plot_densityplot3.png
