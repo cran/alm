@@ -1,6 +1,6 @@
 Package: alm
-Version: 0.1.6
-Date: 2014-04-22
+Version: 0.1.8
+Date: 2014-06-10
 Description: An R interface to the open source article level metrics API
     created by the Public Library of Science (PLOS). A number of publishers are
     using the open source app created by PLOS, so you can drop in a different
@@ -19,15 +19,15 @@ Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "mfenner.ram@plos.org"))
 URL: https://github.com/ropensci/alm
 BugReports: http://www.github.com/ropensci/alm/issues
+Additional_repositories: https://github.com/ramnathv/rCharts
 LazyLoad: yes
 LazyData: yes
 VignetteBuilder: knitr
-Roxygen: list(wrap = FALSE)
 Imports: ggplot2, RCurl, plyr, stringr, reshape, reshape2, httr, grid,
         RJSONIO, lubridate
 Suggests: testthat, roxygen2, rplos, knitr, jsonlite
 Enhances: rCharts
-Packaged: 2014-04-22 18:53:06 UTC; sacmac
+Packaged: 2014-06-10 19:44:10 UTC; sacmac
 Author: Scott Chamberlain [aut, cre],
   Carl Boettiger [aut],
   Karthik Ram [aut],
@@ -35,4 +35,4 @@ Author: Scott Chamberlain [aut, cre],
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2014-04-22 22:10:47
+Date/Publication: 2014-06-11 08:27:54
