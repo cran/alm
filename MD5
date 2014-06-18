@@ -1,6 +1,6 @@
-68d5bee38b2ac3f98de3c0a686e1990a *DESCRIPTION
+cc62cda5793a832cbceda265cd29919a *DESCRIPTION
 9aafab5fef00ddd5e0e163f69316fe3b *NAMESPACE
-3ddd84890a8b6ff295bcfcb4d95ac3ba *NEWS
+3f74be1a01f5bed59b0155c9e7509f04 *NEWS
 9b0068dd6dd7f51579fbb8aa4c51fa30 *R/alm.R
 e23c19d7a781406f593488fd00cda2af *R/almdatepub.R
 7b5e0db56e68d0028a98a4b5b4662aab *R/almdateupdated.R
@@ -107,10 +107,9 @@ d6d7d6acea18a9cd3277dff23763edeb *man/almupdated.Rd
 49d8ab6d97d2a67967a44943f81fc6dc *man/plot_density.Rd
 d53fb00b09424a0a42b6668c2b22c80c *man/plot_signposts.Rd
 f197cd37a2329578f5d63105abd14b86 *man/signposts.Rd
-681b497c328f79c786605e452d58e5c0 *tests/test-all.R
 ef3cdf9dc130e01b9d4d4e166ac33d89 *tests/testthat/test-alm.R
 49efa2f23ff88f9ac216e3c33a7a5645 *tests/testthat/test-almdatepub.R
-f499ab18035b8accf10378526aa16378 *tests/testthat/test-almevents.R
+3f30fef9778b9807c7e7512810c57fdd *tests/testthat/test-almevents.R
 2a1610ce6358e72eab96719eaa8c2ab1 *tests/testthat/test-almplot.R
 7cd3928a9b843f893d4f0ae55a58d791 *tests/testthat/test-almpubmedcentid.R
 b83587720b5cdd1e785accf27ab1e0c4 *tests/testthat/test-almpubmedid.R
