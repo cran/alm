@@ -1,15 +1,13 @@
 Package: alm
-Title: R Client for the Lagotto Altmetrics API Platform.
-Description: An R interface to the open source article level metrics API
-    created by the Public Library of Science (PLOS). A number of publishers are
-    using the open source app created by PLOS, so you can drop in a different
-    base URL to the functions in this package to get to not only PLOS data, but
-    data for Crossref, and more as the open source PLOS software is used.
-    rCharts is in Enhances; and can be used for creating interactive charts
-    (e.g., in the function plot_signposts in this package); obtain rCharts at
-    https://github.com/ramnathv/rCharts.
-Version: 0.3.1
-Date: 2014-10-29
+Title: R Client for the Lagotto Altmetrics Platform
+Description: An R interface to the open source article level metrics platform
+    <https://github.com/articlemetrics/lagotto/> created by the Public Library
+    of Science (PLOS). A number of publishers are using the open source app 
+    created by PLOS, so you can drop in a different base URL to the functions 
+    in this package to get to not only PLOS data, but data for Crossref, 
+    and more as the open source PLOS software is used.
+Version: 0.4.0
+Date: 2015-03-13
 License: MIT + file LICENSE
 Authors@R: c(person("Scott", "Chamberlain", role = c("aut", "cre"),
     email = "myrmecocystus@gmail.com"),
@@ -26,8 +24,7 @@ VignetteBuilder: knitr
 Imports: ggplot2, plyr, stringr, reshape, reshape2, httr, grid,
         jsonlite, lubridate
 Suggests: testthat, roxygen2, rplos, knitr
-Enhances: rCharts
-Packaged: 2014-10-29 20:32:42 UTC; sacmac
+Packaged: 2015-03-13 17:52:12 UTC; sacmac
 Author: Scott Chamberlain [aut, cre],
   Carl Boettiger [aut],
   Karthik Ram [aut],
@@ -35,4 +32,4 @@ Author: Scott Chamberlain [aut, cre],
 Maintainer: Scott Chamberlain <myrmecocystus@gmail.com>
 NeedsCompilation: no
 Repository: CRAN
-Date/Publication: 2014-10-29 22:03:16
+Date/Publication: 2015-03-13 20:22:04
